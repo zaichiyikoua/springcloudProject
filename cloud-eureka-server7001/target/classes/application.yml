@@ -1,0 +1,20 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: cloud-eureka-server
+
+eureka:
+  instance:
+    hostname: localhost
+    # 将自己的ip注册到eureka，一般建议开启
+    prefer-ip-address: true
+  client:
+    # 是否注册到eureka的两个配置
+    register-with-eureka: false
+    fetch-registry: false
+    # eureka的地址
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
