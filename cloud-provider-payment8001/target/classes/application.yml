@@ -1,18 +1,24 @@
 server:
   port: 8001
 
-###数据库配置
 spring:
   application:
     name: cloud-provider-payment8001
+  # 数据库配置
   datasource:
     url: jdbc:mysql://localhost:3306/cloudpractice?characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: zaichiyikoua1
 
-###mybatis配置
+# mybatis配置
 mybatis:
   mapper-locations: classpath:com/zaichiyikou/starter/dao/*.xml
   
-  
+# eureka配置 
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
