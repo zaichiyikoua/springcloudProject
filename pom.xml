@@ -88,5 +88,6 @@
 		<module>cloud-eureka-server7001</module>
 		<module>cloud-consumer-order80</module>
 		<module>cloud-consumer-order-feign80</module>
+		<module>cloud-consumer-order-feign-hystrix80</module>
 	</modules>
 </project>
