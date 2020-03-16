@@ -15,7 +15,7 @@ public class PaymentController {
     @Autowired
     private PaymentServiceImpl service;
 
-    @RequestMapping(value = "/payment/add", method = RequestMethod.POST)
+    @RequestMapping(value = "/nacos/payment/add", method = RequestMethod.POST)
     public CommonResult addPayment(Payment payment) {
         int result = service.addPayment(payment);
         System.out.println("******插入结果******" + result);
@@ -26,7 +26,7 @@ public class PaymentController {
         }
     };
 
-    @RequestMapping(value = "/payment/get/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/nacos/payment/get/{id}", method = RequestMethod.GET)
     public CommonResult getPaymentById(@PathVariable("id") Long id) {
         Payment paymentById = service.getPaymentById(id);
         if (paymentById != null) {
