@@ -94,5 +94,6 @@
 		<module>cloud-gateway-gateway9527</module>
 		<module>cloud-nacos-provider-payment9001</module>
 		<module>cloud-nacos-provider-payment9002</module>
+		<module>cloud-nacos-consumer-order81</module>
 	</modules>
 </project>
