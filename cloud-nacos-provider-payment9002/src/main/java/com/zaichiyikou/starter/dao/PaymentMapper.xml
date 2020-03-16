@@ -1,0 +1,14 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.zaichiyikou.starter.dao.PaymentDao">
+ 
+ 	<insert id="addPayment" parameterType="com.zaichiyikou.starter.pojo.Payment" useGeneratedKeys="true" keyProperty="id">
+ 		insert into payment(id,serial) values(#{id},#{serial});
+ 	</insert>
+ 
+ 	<select id="getPaymentById" parameterType="Long" resultType="com.zaichiyikou.starter.pojo.Payment">
+ 		select * from payment where id = #{id};
+ 	</select>
+ </mapper>

@@ -1,0 +1,26 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: cloud-nacos-provider-payment9002
+  # 数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloudpractice?characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: zaichiyikoua1
+  # 注册进nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 # nacos的ip地址，这里默认是本机的8848端口
+# mybatis配置
+mybatis:
+  mapper-locations: classpath:com/zaichiyikou/starter/dao/*.xml
+       
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
