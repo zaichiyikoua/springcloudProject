@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-nacos-provider-payment9002
+    name: cloud-nacos-provider-payment
   # 数据库配置
   datasource:
     url: jdbc:mysql://localhost:3306/cloudpractice?characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=UTC
